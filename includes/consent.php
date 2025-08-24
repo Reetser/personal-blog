@@ -8,10 +8,10 @@
       <ul>
         <li>✅ You are at least <strong>18 years old</strong>.</li>
         <li>✅ You have read and agree to our 
-          <a href="privacy.html">Privacy Policy</a>, 
-          <a href="disclaimer.html">Disclaimer</a>, 
-          <a href="cookies.html">Cookie Policy</a>, and 
-          <a href="terms.html">Terms & Conditions</a>.
+      <a href="/pages/privacy-policy.php?id=privacy">Privacy Policy</a> |
+      <a href="/pages/terms-of-service.php?id=terms">Terms of Service</a> |
+      <a href="/pages/cookie-policy.php?id=cookies">Cookie Policy</a> |
+      <a href="/pages/disclaimer.php?id=disclaimer">Disclaimer</a>
         </li>
       </ul>
       <div class="consent-buttons">
