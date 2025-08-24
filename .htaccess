@@ -27,7 +27,7 @@ Options -Indexes
 
 # Disable hotlinking (allow your domain + google/bing cache)
 RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^https?://(www\.)?yourdomain\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?resteerjohn\.com [NC]
 RewriteCond %{HTTP_REFERER} !google\. [NC]
 RewriteCond %{HTTP_REFERER} !bing\. [NC]
 RewriteRule \.(jpg|jpeg|png|gif|webp|svg|mp4|css|js)$ - [F,NC,L]
