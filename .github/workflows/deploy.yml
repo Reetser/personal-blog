@@ -1,0 +1,23 @@
+name: Deploy to Web Host
+
+on:
+  push:
+    branches: [ "main" ]   # runs when you push to main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps           # try "ftp" if host doesn’t support SSL
+          server-dir: /public_html/ # adjust to your hosting’s root folder
+
