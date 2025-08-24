@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps           # try "ftp" if host doesn’t support SSL
-          server-dir: /public_html/ # adjust to your hosting’s root folder
+          server-dir: ./ # adjust to your hosting’s root folder
 
