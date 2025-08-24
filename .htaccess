@@ -1,0 +1,57 @@
+# ==========================================
+# Skip protections if working locally
+# ==========================================
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1) [NC]
+RewriteRule .* - [L]
+</IfModule>
+
+# ==========================================
+# Enable protections for online
+# ==========================================
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Block common bad bots and AI scrapers
+RewriteCond %{HTTP_USER_AGENT} (GPTBot|ChatGPT-User|Bytespider|ClaudeBot|Amazonbot|CCBot|Diffbot|MJ12bot|DataForSeoBot|Scrapy|python-requests|libwww-perl|curl|wget|Go-http-client) [NC]
+RewriteRule .* - [F,L]
+
+# Block requests with empty User-Agent or suspicious headers
+RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+RewriteCond %{HTTP_REFERER} ^-?$ [NC]
+RewriteRule .* - [F,L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Disable hotlinking (allow your domain + google/bing cache)
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?yourdomain\.com [NC]
+RewriteCond %{HTTP_REFERER} !google\. [NC]
+RewriteCond %{HTTP_REFERER} !bing\. [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp|svg|mp4|css|js)$ - [F,NC,L]
+</IfModule>
+
+# ==========================================
+# Headers for crawl delay + security
+# ==========================================
+<IfModule mod_headers.c>
+# Limit crawling frequency (advisory)
+Header set X-Robots-Tag "all"
+Header set Crawl-Delay "2592000"
+
+# Security headers
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-XSS-Protection "1; mode=block"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ==========================================
+# Prevent file access to sensitive files
+# ==========================================
+<FilesMatch "\.(env|htaccess|htpasswd|ini|log|sh|bak|config|json)$">
+Require all denied
+</FilesMatch>
