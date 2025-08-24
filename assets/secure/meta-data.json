@@ -1,0 +1,44 @@
+{
+  "home": {
+    "title": "Resteer John L. Lumbab",
+    "description": "A simple, clean, privacy-friendly blog website.",
+    "keywords": "blog, minimal, privacy, simple",
+    "author": "Resteer John L. Lumbab"
+  },
+  "about": {
+    "title": "About",
+    "description": "I am Resteer John L. Lumbab. Learn more about my journey, ideas, and thoughts shared here.",
+    "keywords": "about me, blog, introduction, minimal, resteer john lumbab",
+    "author": "Resteer John L. Lumbab"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "If you want to contact me, send me an email directly. I value privacy and keep communication simple.",
+    "keywords": "contact, email, simplicity, minimalism, privacy",
+    "author": "Resteer John L. Lumbab"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Read how I handle your data and why privacy matters on this blog.",
+    "keywords": "privacy, data protection, personal information, blog privacy policy",
+    "author": "Resteer John L. Lumbab"
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "description": "This blog uses minimal cookies only when necessary. Learn how cookies are handled.",
+    "keywords": "cookies, cookie policy, minimal cookies, tracking-free, privacy",
+    "author": "Resteer John L. Lumbab"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "The rules, limitations, and fair use terms for accessing and using this blog.",
+    "keywords": "terms of service, usage rules, conditions, website policy",
+    "author": "Resteer John L. Lumbab"
+  },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "description": "The content shared on this blog is based on personal opinions and experiences. Read the disclaimer for details.",
+    "keywords": "disclaimer, blog disclaimer, personal opinion, liability",
+    "author": "Resteer John L. Lumbab"
+  }
+}
