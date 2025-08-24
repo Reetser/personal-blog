@@ -33,6 +33,49 @@ I can post anything I want, and I can delete anything I choose — complete free
 <p>On this website, you’ll find a mix of my personal thoughts, projects, and discoveries. 
 Sometimes I’ll share guides or resources I’ve learned from experience, other times I might just post something creative or experimental. 
 It’s a place where I can freely express myself without worrying about trends, algorithms, or outside control.</p>
+
+<dev>
+  <h2>Lost Thyself</h2>
+<p>I'm Human, Not A Robot<br>
+I'm Not AI, I'm A Man<br>
+I don't know what to Write, I do Write<br>
+I don't know what to Create, I do Create<br>
+I don't know Anything, I know Something</p>
+
+<p>I'm Broke, I have coins<br>
+I'm in Debt, I'm out of Breath<br>
+I'm Living, I'm Surviving<br>
+I don't know what to do, I do<br>
+I'm Lost, I take paths<br>
+I'm not Alone, I'm Lone</p>
+
+<p>I Cried, I laugh<br>
+I hate my flows, I recreate my flaws<br>
+I'm Walking Around, Going Round And Round</p>
+
+<p>I run away, But Find Myself Again<br>
+I wake Up, Keep Waking Up<br>
+I'm Aware, Found thyself nowhere<br>
+I have many many foods, can't finish one<br>
+I'm Returning, Hardly can't escape</p>
+
+<p>I want to change, Find thyself Again<br>
+I want to change, Find thyself Again<br>
+I want to change, Find thyself Again</p>
+
+<p>I do change, Find thyself Again<br>
+I do change, Find thyself Again<br>
+I do change, Find thyself Again</p>
+
+<p>I'm Sick And Tired, I drink vitamins<br>
+I'm Sick And Tired, I'm Sick<br>
+I'm Sick And Tired, I'm Tired<br>
+I'm Sick And Tired, Fooling Thyself</p>
+
+<p>Lost Thyself</p>
+</dev>
+
+
   </article>
 </main>
 
