@@ -15,16 +15,16 @@
       </thead>
       <tbody>
         <tr>
-          <td><a href="post.php?id=post-1">My First Blog</a></td>
-          <td>A simple introduction post.</td>
-          <td>Aug 20, 2025</td>
-          <td><a href="post1.pdf">Download</a></td>
+          <td><a href="#">No Money, No Baby - The Financial Aspect Of Parenthood</a></td>
+          <td>Money</td>
+          <td>Aug 25, 2025</td>
+          <td><a href="#">Download</a></td>
         </tr>
         <tr>
-          <td><a href="post.php?id=post-2">Why Simplicity Wins</a></td>
-          <td>Why minimal websites last longer.</td>
-          <td>Aug 22, 2025</td>
-          <td><a href="post2.pdf">Download</a></td>
+          <td><a href="post.php?id=post-2">Soon</a></td>
+          <td>Soon</td>
+          <td>Soon</td>
+          <td><a href="#">Download</a></td>
         </tr>
       </tbody>
     </table>
