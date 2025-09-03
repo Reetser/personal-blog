@@ -25,22 +25,22 @@
                 
                 <ul class="footer-list list">
                     <li class="list-item">
-                        <a href="category.php?cat=travel&&category" class="list-link">Travel</a>
+                        <a href="/category.php?cat=travel&&category" class="list-link">Travel</a>
                     </li>
                     <li class="list-item">
-                        <a href="category.php?cat=food&&category" class="list-link">Food</a>
+                        <a href="/category.php?cat=food&&category" class="list-link">Food</a>
                     </li>
                     <li class="list-item">
-                        <a href="category.php?cat=technology&&category" class="list-link">Technology</a>
+                        <a href="/category.php?cat=technology&&category" class="list-link">Technology</a>
                     </li>
                     <li class="list-item">
-                        <a href="category.php?cat=health&&category" class="list-link">Health</a>
+                        <a href="/category.php?cat=health&&category" class="list-link">Health</a>
                     </li>
                     <li class="list-item">
-                        <a href="category.php?cat=nature&&category" class="list-link">Nature</a>
+                        <a href="/category.php?cat=nature&&category" class="list-link">Nature</a>
                     </li>
                     <li class="list-item">
-                        <a href="category.php?cat=fitness&&category" class="list-link">Fitness</a>
+                        <a href="/category.php?cat=fitness&&category" class="list-link">Fitness</a>
                     </li>
                 </ul>
 
