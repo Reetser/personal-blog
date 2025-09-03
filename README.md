@@ -18,4 +18,4 @@ This is a **personal project**.
 This project is not intended for redistribution or commercial use.  
 Please respect it as a personal website project.
 ## Credits
-I would like to thank the [following]{credits.md}. There creations help me to build this website, thank you.
+I would like to thank the [following](https://github.com/Reetser/personal-blog/blob/main/credits.md). There creations help me to build this website, thank you.
