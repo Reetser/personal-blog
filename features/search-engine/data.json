@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Breaking News Today",
+    "date": "2025-08-10",
+    "category": "Travel",
+    "description": "Some breaking news content here.",
+    "image": "./assets/images/older_posts/older_posts_1.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Tech Innovation 2025",
+    "date": "2025-08-09",
+    "category": "Food",
+    "description": "Latest in tech industry.",
+    "image": "./assets/images/older_posts/older_posts_2.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Sports Highlights",
+    "date": "2025-08-08",
+    "category": "sports",
+    "description": "Exciting sports news.",
+    "image": "./assets/images/older_posts/older_posts_3.jpg",
+    "link": "#"
+  }
+]

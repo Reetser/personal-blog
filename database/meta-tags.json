@@ -1,0 +1,128 @@
+{
+    "blogs": {
+        "title": "Blogs | Resteer",
+        "description": "Learn what PHP is, how it works, and why it powers millions of websites worldwide.",
+        "url": "https://example.com/what-is-php",
+        "image": "https://example.com/images/php-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "article"
+    },
+    "photos": {
+        "title": "Photos | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "videos": {
+        "title": "Videos | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "about": {
+        "title": "About | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "Credits": {
+        "title": "Credits | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "contact": {
+        "title": "Contact | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "category": {
+        "title": "Category | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "faq": {
+        "title": "Frequently Ask Questions | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "support": {
+        "title": "Support | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "transparency": {
+        "title": "Transparency Policy | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "privacy": {
+        "title": "Privacy Policy | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "terms": {
+        "title": "Terms And Conditions | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "disclaimer": {
+        "title": "Disclaimer | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    },
+    "cookies": {
+        "title": "Cookie Policy | Resteer",
+        "description": "Get to know more about Resteer and the mission behind our website.",
+        "url": "https://example.com/about-us",
+        "image": "https://example.com/images/about-cover.jpg",
+        "author": "Resteer John Lumbab",
+        "language": "en",
+        "type": "website"
+    }
+}

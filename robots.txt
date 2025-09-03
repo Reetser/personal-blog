@@ -1,0 +1,76 @@
+# robots.txt for resteerjohn.com
+
+# Block known AI and invasive crawlers completely
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: libwww-perl
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: Go-http-client
+Disallow: /
+
+# Allow common search engines, but limit crawl frequency to once a month
+User-agent: Googlebot
+Crawl-delay: 2592000
+Allow: /
+
+User-agent: Bingbot
+Crawl-delay: 2592000
+Allow: /
+
+User-agent: DuckDuckBot
+Crawl-delay: 2592000
+Allow: /
+
+User-agent: Yandex
+Crawl-delay: 2592000
+Allow: /
+
+# Default rule for others
+User-agent: *
+Crawl-delay: 2592000
+Allow: /
+
+# Optional: block crawling of admin/sensitive folders
+Disallow: /admin/
+Disallow: /config/
+Disallow: /private/
+Disallow: /includes/
+Disallow: /uploads/private/

@@ -1,0 +1,66 @@
+/* Newsletter Section */
+.newsletter-description {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Modal Styling */
+#consent-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+}
+
+#consent-content {
+  background: #fff;
+  color: #111;
+  width: min(90%, 720px);
+  max-height: 85vh;
+  overflow: auto;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+#consent-content h3 {
+  margin: 0 0 10px;
+}
+
+#consent-text {
+  background: #f7f7f9;
+  border: 1px solid #ececf1;
+  padding: 12px;
+  margin: 0 0 14px;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.consent-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.download-actions,
+.decision-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 8px 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
