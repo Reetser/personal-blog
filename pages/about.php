@@ -16,7 +16,7 @@
             <div class="container">
 <h2>Who Am I</h2>
 <p>Howdy! How are you? I'm Resteer John L. Lumbab — the owner and creator of this website. 
-I’m 24 years old and currently living in the Philippines.</p>
+I’m 24 years old and currently living in the Philippines,  Misamis Oriental.</p>
 
 <h2>Why Did I Build This Website?</h2>
 <p>I wanted to have my own personal space on the web. 
