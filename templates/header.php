@@ -14,7 +14,7 @@
     }
 
     // Load JSON relative to this file's directory
-    $metaFile = '../database/meta-tags.json';
+    $metaFile = './database/meta-tags.json';
     if (file_exists($metaFile)) {
         $metaData = json_decode(file_get_contents($metaFile), true);
     } else {
@@ -63,7 +63,7 @@
 
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/Resteer John L. Lumbab_PFP.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/Resteer John L. Lumbab_PFP.webp">
     <!-- Remix icons -->
     <link href="/assets/css/remixicon.css" rel="stylesheet">
     <!-- Swiper.js styles -->
