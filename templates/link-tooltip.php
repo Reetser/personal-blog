@@ -5,8 +5,9 @@
         <h3 id="previewTitle"></h3>
         <p id="previewDescription"></p>
         <p class="liability-statement">
-            I am aware that visiting this external site is my own responsibility. 
-            The owner of this site is not liable for any loss, damage, or consequences resulting from accessing this link.
+            I am aware that visiting this external site is my own responsibility.
+            The owner of this site is not liable for any loss, damage, or consequences resulting from accessing this
+            link.
         </p>
         <div class="preview-buttons">
             <button id="agreeBtn">I Agree</button>

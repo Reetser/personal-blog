@@ -1,8 +1,6 @@
+<?php include("./templates/header.php") ?>
 
-   
-    <?php include("./templates/header.php") ?>
-
-    <?php
+<?php
 // Load JSON file
 $jsonFile = './database/blogs.json';
 if (file_exists($jsonFile)) {
@@ -12,7 +10,7 @@ if (file_exists($jsonFile)) {
 }
 
 // Sort by date (latest first)
-usort($blogs, function($a, $b) {
+usort($blogs, function ($a, $b) {
     return strtotime($b['date'] ?? '1970-01-01') - strtotime($a['date'] ?? '1970-01-01');
 });
 
@@ -20,28 +18,23 @@ usort($blogs, function($a, $b) {
 $latestBlogs = array_slice($blogs, 0, 5);
 ?>
 
-    <!-- Age Get-->
-
-    
-    <!-- Featured articles -->
-    <?php include("./templates/featured_articles.php") ?>
-
-    <!-- Quick read -->
-    <?php include("./templates/quick_read.php") ?>
-
-    <!-- Older posts -->
-    <?php include("./templates/older_posts.php") ?>
-
-    <!-- Popular tags -->
-    <?php include("./templates/popular_tags.php") ?>
-
-    <!-- Newsletter -->
-     <?php include("./templates/newsletter.php") ?>
-
-    <!-- Footer -->
-    <?php include("./templates/footer.php") ?>
-    
-    
+<!-- Age Get-->
 
 
+<!-- Featured articles -->
+<?php include("./templates/featured_articles.php") ?>
 
+<!-- Quick read -->
+<?php include("./templates/quick_read.php") ?>
+
+<!-- Older posts -->
+<?php include("./templates/older_posts.php") ?>
+
+<!-- Popular tags -->
+<?php include("./templates/popular_tags.php") ?>
+
+<!-- Newsletter -->
+<?php include("./templates/newsletter.php") ?>
+
+<!-- Footer -->
+<?php include("./templates/footer.php") ?>

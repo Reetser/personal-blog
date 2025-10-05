@@ -32,7 +32,8 @@ $allowedThumbs = ['jpg', 'jpeg', 'png', 'gif'];
 $videos = [];
 
 // Helper function to format titles nicely
-function formatTitle($filename) {
+function formatTitle($filename)
+{
     $name = pathinfo($filename, PATHINFO_FILENAME);
     $name = str_replace(['-', '_'], ' ', $name);
     return ucwords(strtolower($name));
@@ -79,30 +80,25 @@ usort($videos, fn($a, $b) => strcmp($a['title'], $b['title']));
 
 
 
-    <?php include("../templates/header.php") ?>
+<?php include("../templates/header.php") ?>
 
 
 <section class="section section-header-offset container">
-<video
-    id="vp-videoPlayer"
-    class="video-js vjs-default-skin vjs-fluid"
-    controls
-    preload="auto"
-    data-setup='{"fluid": true}'>
-    <source src="<?= htmlspecialchars($videos[0]['src']) ?>" type="video/mp4">
-</video>
+    <video id="vp-videoPlayer" class="video-js vjs-default-skin vjs-fluid" controls preload="auto"
+        data-setup='{"fluid": true}'>
+        <source src="<?= htmlspecialchars($videos[0]['src']) ?>" type="video/mp4">
+    </video>
 
-<ul id="vp-playlist">
-    <?php foreach($videos as $index => $video): ?>
-        <li data-src="<?= htmlspecialchars($video['src']) ?>" class="<?= $index === 0 ? 'vp-active' : '' ?>">
-            <img src="<?= htmlspecialchars($video['thumb']) ?>" alt="<?= htmlspecialchars($video['title']) ?>">
-            <span><?= htmlspecialchars($video['title']) ?></span>
-        </li>
-    <?php endforeach; ?>
-</ul>
-  
-  
+    <ul id="vp-playlist">
+        <?php foreach ($videos as $index => $video): ?>
+            <li data-src="<?= htmlspecialchars($video['src']) ?>" class="<?= $index === 0 ? 'vp-active' : '' ?>">
+                <img src="<?= htmlspecialchars($video['thumb']) ?>" alt="<?= htmlspecialchars($video['title']) ?>">
+                <span><?= htmlspecialchars($video['title']) ?></span>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+
 </section>
 
-    <?php include("../templates/footer.php") ?>
-    
+<?php include("../templates/footer.php") ?>
