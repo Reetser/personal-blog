@@ -25,7 +25,7 @@
     $page_title = "Resteer | Home";
     $page_description = "Welcome to Resteer's website.";
     $page_url = "https://resteerjohn.com";
-    $page_image = "https://example.com/images/default.jpg";
+    $page_image = "https://resteerjohn.com/assets/images/default.jpg";
     $page_author = "Resteer John Lumbab";
     $page_language = "en";
     $page_type = "website";
