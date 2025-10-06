@@ -5,61 +5,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <?php
-    // Detect page key
-    if (isset($_GET['page']) && $_GET['page'] !== '') {
-        $pageParam = strtolower($_GET['page']);
+    // Set to true temporarily to see debugging info inside HTML comments (view-source)
+    $debug = false;
+
+    // Try document-root path first (avoids problems when including from different folders)
+    $jsonPath = rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/database/meta-tags.json';
+
+    // fallback to relative path if not found
+    if (!file_exists($jsonPath)) {
+        $jsonPath = './database/meta-tags.json';
+    }
+
+    // read JSON (suppress warnings with @ and handle errors)
+    $raw = @file_get_contents($jsonPath);
+    if ($raw === false) {
+        $metaRaw = [];
+        $jsonError = 'file_get_contents failed';
     } else {
-        $pageParam = strtolower(pathinfo($_SERVER['SCRIPT_FILENAME'], PATHINFO_FILENAME));
+        $metaRaw = json_decode($raw, true);
+        $jsonError = (json_last_error() === JSON_ERROR_NONE) ? null : json_last_error_msg();
+        if (!is_array($metaRaw))
+            $metaRaw = [];
     }
 
-    // Load JSON relative to this file's directory
-    $metaFile = './database/meta-tags.json';
-    if (file_exists($metaFile)) {
-        $metaData = json_decode(file_get_contents($metaFile), true);
-    } else {
-        $metaData = [];
+    // Normalize keys to lowercase so lookups are case-insensitive
+    $metaData = array_change_key_case($metaRaw, CASE_LOWER);
+
+    // page param (lowercased)
+    $page = strtolower($_GET['page'] ?? 'home');
+
+    // defaults
+    $defaults = [
+        'title' => 'Resteer | Home',
+        'description' => "Welcome to Resteer's website.",
+        'url' => '/',
+        'image' => '/assets/images/default.jpg',
+        'author' => 'Resteer John Lumbab',
+        'language' => 'en',
+        'type' => 'website',
+    ];
+
+    // merge defaults with page data (if exists)
+    $currentMeta = array_merge($defaults, $metaData[$page] ?? []);
+
+    // debug output (HTML comments, invisible on page)
+    if ($debug) {
+        $keys = implode(', ', array_keys($metaData));
+        echo "\n<!-- DEBUG: jsonPath: {$jsonPath} -->\n";
+        echo "<!-- DEBUG: file_exists: " . (file_exists($jsonPath) ? 'yes' : 'no') . " -->\n";
+        echo "<!-- DEBUG: jsonError: " . ($jsonError ?? 'none') . " -->\n";
+        echo "<!-- DEBUG: page param: " . htmlspecialchars($page, ENT_QUOTES, 'UTF-8') . " -->\n";
+        echo "<!-- DEBUG: json keys: " . htmlspecialchars($keys, ENT_QUOTES, 'UTF-8') . " -->\n";
+        echo "<!-- DEBUG: currentMeta: " . htmlspecialchars(json_encode($currentMeta), ENT_QUOTES, 'UTF-8') . " -->\n";
     }
-
-    // Default meta values
-    $page_title = "Resteer | Home";
-    $page_description = "Welcome to Resteer's website.";
-    $page_url = "https://resteerjohn.com";
-    $page_image = "https://resteerjohn.com/assets/images/default.jpg";
-    $page_author = "Resteer John Lumbab";
-    $page_language = "en";
-    $page_type = "website";
-
-    // Overwrite if found in JSON
-    if (isset($metaData[$pageParam])) {
-        $data = $metaData[$pageParam];
-        $page_title = $data['title'] ?? $page_title;
-        $page_description = $data['description'] ?? $page_description;
-        $page_url = $data['url'] ?? $page_url;
-        $page_image = $data['image'] ?? $page_image;
-        $page_author = $data['author'] ?? $page_author;
-        $page_language = $data['language'] ?? $page_language;
-        $page_type = $data['type'] ?? $page_type;
-    }
-
-
     ?>
-    <!-- Dynamic Meta Tags -->
-    <title><?= htmlspecialchars($page_title) ?></title>
-    <meta name="description" content="<?= htmlspecialchars($page_description) ?>">
+
+    <title><?= htmlspecialchars($currentMeta['title'], ENT_QUOTES, 'UTF-8') ?></title>
+    <meta name="description" content="<?= htmlspecialchars($currentMeta['description'], ENT_QUOTES, 'UTF-8') ?>">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="<?= htmlspecialchars($page_url) ?>">
-    <meta name="author" content="<?= htmlspecialchars($page_author) ?>">
-    <meta http-equiv="Content-Language" content="<?= htmlspecialchars($page_language) ?>">
-    <meta property="og:title" content="<?= htmlspecialchars($page_title) ?>">
-    <meta property="og:description" content="<?= htmlspecialchars($page_description) ?>">
-    <meta property="og:image" content="<?= htmlspecialchars($page_image) ?>">
-    <meta property="og:url" content="<?= htmlspecialchars($page_url) ?>">
-    <meta property="og:type" content="<?= htmlspecialchars($page_type) ?>">
+    <link rel="canonical" href="<?= htmlspecialchars($currentMeta['url'], ENT_QUOTES, 'UTF-8') ?>">
+    <meta name="author" content="<?= htmlspecialchars($currentMeta['author'], ENT_QUOTES, 'UTF-8') ?>">
+    <meta http-equiv="Content-Language"
+        content="<?= htmlspecialchars($currentMeta['language'], ENT_QUOTES, 'UTF-8') ?>">
+    <meta property="og:title" content="<?= htmlspecialchars($currentMeta['title'], ENT_QUOTES, 'UTF-8') ?>">
+    <meta property="og:description" content="<?= htmlspecialchars($currentMeta['description'], ENT_QUOTES, 'UTF-8') ?>">
+    <meta property="og:image" content="<?= htmlspecialchars($currentMeta['image'], ENT_QUOTES, 'UTF-8') ?>">
+    <meta property="og:url" content="<?= htmlspecialchars($currentMeta['url'], ENT_QUOTES, 'UTF-8') ?>">
+    <meta property="og:type" content="<?= htmlspecialchars($currentMeta['type'], ENT_QUOTES, 'UTF-8') ?>">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?= htmlspecialchars($page_title) ?>">
-    <meta name="twitter:description" content="<?= htmlspecialchars($page_description) ?>">
-    <meta name="twitter:image" content="<?= htmlspecialchars($page_image) ?>">
+    <meta name="twitter:title" content="<?= htmlspecialchars($currentMeta['title'], ENT_QUOTES, 'UTF-8') ?>">
+    <meta name="twitter:description"
+        content="<?= htmlspecialchars($currentMeta['description'], ENT_QUOTES, 'UTF-8') ?>">
+    <meta name="twitter:image" content="<?= htmlspecialchars($currentMeta['image'], ENT_QUOTES, 'UTF-8') ?>">
 
 
     <!-- Favicon -->
@@ -103,10 +125,10 @@
                         <a href="/blogs.php?page=blogs" class="list-link">Blog</a>
                     </li>
                     <li class="list-item">
-                        <a href="/pages/photos.php" class="list-link">Photos</a>
+                        <a href="/pages/photos.php?page=photos" class="list-link">Photos</a>
                     </li>
                     <li class="list-item">
-                        <a href="/pages/videos.php" class="list-link">Videos</a>
+                        <a href="/pages/videos.php?page=videos" class="list-link">Videos</a>
                     </li>
                     <li class="list-item">
                         <a href="/pages/about.php?page=about" class="list-link">About</a>
