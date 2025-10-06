@@ -1,72 +1,210 @@
-/* Developer Actions Modal */
-.dev-gate-modal {
+/* Photos Gate – unique namespace: pg- */
+.pg-modal {
   display: none;
+  
+  /* CRITICAL: Must be 'fixed' to cover viewport */
   position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  inset: 0;
   background: rgba(0,0,0,0.85);
-  z-index:9999;
+  z-index: 9999;
+  
+  /* 🟢 FIX 1: Change to flex-start. This anchors the content to the top 
+     of the modal viewport, allowing the entire block to be scrolled into view. */
   justify-content: center;
-  align-items: center;
-  overflow:auto;
+  align-items: flex-start; 
+  
+  /* CRITICAL: Allows the entire modal container to scroll if content is too tall */
+  overflow-y: auto; 
+  overflow-x: hidden; 
 }
 
-.dev-gate-content {
-  background:#fff;
-  color:#111;
-  padding:24px;
-  border-radius:12px;
-  max-width:720px;
-  width:90%;
+/* 🟢 ADDED: Class to be toggled by JavaScript to actually show the modal */
+.pg-modal.pg-active {
+  display: flex;
+}
+
+.pg-content {
+  background: #fff;
+  color: #111;
+  padding: 24px;
+  border-radius: 12px;
+  
+  max-width: 760px;
+  width: 92%;
+  
+  /* 🟢 FIX 2: Increase vertical margin. This provides "scroll slack" so you 
+     can scroll the content clear of the top and bottom viewport edges. */
+  margin: 40px 0; 
+
   box-shadow: 0 0 24px rgba(0,0,0,0.5);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-.dev-gate-inputs label {
-  display:block;
-  margin-top:12px;
-  font-size:14px;
+.pg-title {
+  margin: 0 0 6px;
+  font-size: 22px;
 }
 
-.dev-gate-inputs input {
-  width:100%;
-  padding:6px;
-  margin-top:4px;
-  border-radius:4px;
-  border:1px solid #ccc;
+.pg-intro {
+  margin: 0 0 14px;
+  color: #333;
 }
 
-#dev-signature-pad {
-  border:1px solid #ccc;
-  margin-top:16px;
-  width:100%;
-  height:140px;
-  border-radius:6px;
+.pg-inputs label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.pg-inputs input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box; 
 }
 
-.dev-gate-actions {
-  margin-top:16px;
+.pg-agreement-block {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 14px;
+  max-height: 280px;
+  overflow: auto;
+  background: #fafafa;
 }
 
-.dev-gate-actions button {
-  padding:8px 16px;
-  border:none;
-  border-radius:6px;
-  margin-right:8px;
-  cursor:pointer;
+.pg-agreement h2 {
+  margin: 10px 0 6px;
+  font-size: 16px;
+}
+.pg-agreement h3 {
+  margin: 10px 0 6px;
+  font-size: 15px;
+}
+.pg-agreement p,
+.pg-agreement li {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #222;
+}
+.pg-agreement ul {
+  padding-left: 18px;
+  margin: 6px 0 10px;
 }
 
-#dev-agree { background:#4fcf70; color:#fff; }
-#dev-exit { background:#f44336; color:#fff; }
-
-.dev-gate-downloads {
-  margin-top:12px;
+.pg-sign-wrap { margin-top: 14px; }
+.pg-sig-label { display:block; margin-bottom: 6px; font-size: 14px; }
+#pg-signature-pad {
+  border: 1px solid #ccc;
+  width: 100%;
+  /* 🟢 FIX 3: Removed fixed height (140px) to let JS calculate it responsively. */
+  min-height: 120px; 
+  border-radius: 6px;
+  display: block;
+  box-sizing: border-box;
 }
 
-.dev-gate-downloads button {
-  margin-right:8px;
-  padding:6px 12px;
-  cursor:pointer;
+.pg-actions { margin-top: 14px; }
+.pg-downloads { margin-top: 8px; }
+
+.pg-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+  display: inline-block; 
+}
+
+.pg-btn-primary { background: #4fcf70; color: #fff; }
+.pg-btn-danger  { background: #f44336; color: #fff; }
+.pg-btn-lite    { background: #f1f1f1; color: #222; }
+.pg-btn-ghost   { background: transparent; color: #444; border: 1px dashed #bbb; }
+
+.pg-note {
+  margin-top: 10px;
+  color: #666;
+  font-size: 12px;
+}
+
+.pg-gallery { padding: 16px; }
+.pg-gallery-placeholder { color: #666; }
+
+
+/* Agreement Section */
+.agreement-container {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.agreement-container h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.agreement-container h3 {
+  font-size: 1.1rem;
+  margin-top: 16px;
+}
+
+.agreement-container ul,
+.agreement-container ol {
+  margin: 10px 0 10px 20px;
+  padding: 0;
+}
+
+.agreement-container li {
+  margin-bottom: 8px;
+}
+
+.agreement-footer {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .agreement-container {
+    font-size: 13px;
+  }
+  .agreement-container h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ============================
+SMALL SCREENS / MOBILE FIXES
+============================
+*/
+@media (max-width: 600px) {
+  .pg-content { 
+    padding: 18px; 
+    margin: 20px 0;
+    width: 100%;
+    max-width: none;
+    min-height: auto; 
+    border-radius: 0; 
+  }
+  
+  .pg-btn { 
+    display: block; 
+    width: 100%; 
+    margin-right: 0; 
+    margin-bottom: 8px; 
+  }
+  
+  .pg-actions .pg-btn:last-child {
+    margin-bottom: 0;
+  }
 }

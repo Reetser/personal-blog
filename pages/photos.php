@@ -34,8 +34,8 @@ include '/../secure/set-photos-gate.php'; // path adjusted based on location
         </label>
       </div>
 
-      <div class="pg-agreement-block">
-        <div class="pg-agreement" id="pg-consent-text"></div>
+      <div class="">
+        <div class="pg-agreement pg-agreement-block" id="pg-consent-text"></div>
       </div>
 
       <div class="pg-sign-wrap">

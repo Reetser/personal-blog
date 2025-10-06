@@ -1,7 +1,7 @@
 /* Photos Gate – unique namespace: pg- */
 .pg-modal {
   display: none;
-  position: fixed;
+  position: relative;
   inset: 0;
   background: rgba(0,0,0,0.85);
   z-index: 9999;
@@ -111,7 +111,7 @@
 .pg-gallery-placeholder { color: #666; }
 
 /* small screens */
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   .pg-content { padding: 18px; }
   .pg-btn { margin-bottom: 6px; }
 }

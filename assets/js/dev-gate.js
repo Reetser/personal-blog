@@ -29,18 +29,30 @@
 
     // Initialize signature pad
     function sizeCanvas(){
-      const cssW = canvas.clientWidth || 400;
-      const cssH = Math.max(120, Math.round(cssW*0.35));
+      // 🟢 FIX 1: Use getBoundingClientRect for reliable, responsive width
+      const rect = canvas.getBoundingClientRect();
+      const cssW = rect.width;
+
+      // Calculate a responsive height based on a 3:1 ratio (0.33)
+      const cssH = Math.max(120, Math.round(cssW * 0.33));
+      
       canvas.style.height = cssH+'px';
+
       const ratio = Math.max(window.devicePixelRatio||1,1);
       canvas.width = Math.round(cssW*ratio);
       canvas.height = Math.round(cssH*ratio);
+      
       const ctx = canvas.getContext('2d');
       ctx.setTransform(1,0,0,1,0,0);
       ctx.scale(ratio,ratio);
+      
+      // Clear the canvas
       ctx.fillStyle = '#fff';
       ctx.fillRect(0,0,cssW,cssH);
-      if(signaturePad) signaturePad.clear();
+      
+      if(signaturePad) {
+          signaturePad.clear();
+      }
     }
 
     function initSignaturePad(){
@@ -121,8 +133,10 @@ resteerjohn.com does not store this file or any personal data.
     refreshConsentPreview();
 
     function showModal(){ 
-      modal.style.display='flex'; 
+      // 🟢 FIX 2: Use classList to apply the CSS styles for the modal (pg-modal.pg-active in your CSS)
+      modal.classList.add('pg-active'); 
       refreshConsentPreview(); 
+      sizeCanvas(); // 🟢 FIX 3: Re-size canvas just before showing to ensure it fits the current viewport size
     }
 
     // Detect DevTools or device mode change (optimized)
@@ -145,7 +159,8 @@ resteerjohn.com does not store this file or any personal data.
       if(!name){ alert('Please enter your name or alias.'); return; }
       if(!signaturePad || signaturePad.isEmpty()){ alert('Please sign before continuing.'); return; }
       sessionStorage.setItem(SESSION_KEY,'yes');
-      modal.style.display='none';
+      // 🟢 FIX 4: Use classList to hide the modal cleanly
+      modal.classList.remove('pg-active');
     });
 
     exitBtn.addEventListener('click',()=> window.location.href='https://google.com');
