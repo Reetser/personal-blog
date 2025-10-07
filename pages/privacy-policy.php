@@ -60,7 +60,7 @@
             <p>This policy may be updated from time to time. Please visit this page regularly to stay informed.</p>
 
             <!-- Author Info -->
-            <?php include("../templates/author.php") ?>
+        
         </div>
     </div>
 </section>

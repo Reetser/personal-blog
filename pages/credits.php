@@ -124,7 +124,6 @@
 
 
       <!-- Author Info -->
-      <?php include("../templates/author.php") ?>
     </div>
   </div>
 </section>

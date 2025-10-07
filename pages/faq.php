@@ -67,7 +67,6 @@
             <p>You can reach me through my social media links or any contact method provided on this website.</p>
 
             <!-- Author Info -->
-            <?php include("../templates/author.php") ?>
         </div>
     </div>
 </section>

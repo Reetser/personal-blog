@@ -99,11 +99,8 @@
 <script src="/assets/js/swiper-bundle.min.js"></script>
 <!-- Custom script -->
 <script src="/assets/js/main.js"></script>
-
 <script src="/assets/js/jspdf.umd.min.js"></script>
-
 <script src="/assets/js/signature_pad.umd.min.js"></script>
-
 <script src="/assets/js/age-gate.js"></script>
 <script src="/assets/js/newsletter.js"></script>
 <script src="/assets/js/link-preview.js"></script>
