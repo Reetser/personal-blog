@@ -105,12 +105,10 @@
 <script src="/assets/js/signature_pad.umd.min.js"></script>
 
 <script src="/assets/js/age-gate.js"></script>
-<script src="/assets/js/dev-gate.js"></script>
 <script src="/assets/js/newsletter.js"></script>
 <script src="/assets/js/link-preview.js"></script>
 <script src="/assets/js/video.js"></script>
 <script src="/assets/js/player.js"></script>
-<script src="/assets/js/photos-gate.js"></script>
 <script src="/assets/js/jquery.js"></script>
 <script src="/assets/js/lightbox.js"></script>
 

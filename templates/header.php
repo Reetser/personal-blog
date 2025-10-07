@@ -92,13 +92,11 @@
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/dev-gate.css">
     <link rel="stylesheet" href="/assets/css/age-gate.css">
     <link rel="stylesheet" href="/assets/css/newsletter.css">
     <link rel="stylesheet" href="/assets/css/link-preview.css">
     <link rel="stylesheet" href="/assets/css/video-js.css">
     <link rel="stylesheet" href="/assets/css/video-container.css">
-    <link rel="stylesheet" href="/assets/css/photos-gate.css">
     <link rel="stylesheet" href="/assets/css/lightbox.css">
 </head>
 
@@ -195,5 +193,4 @@
 
 
     <?php include("age-gate.php") ?>
-    <?php include("dev-gate.php") ?>
     <?php include("link-tooltip.php") ?>
