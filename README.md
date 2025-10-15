@@ -5,7 +5,7 @@ The site is designed to be **simple, clean, privacy-friendly, and timeless**.
 It’s mostly for my own use and learning.
 
 ## About
-- Built with plain HTML, CSS, and PHP.
+- Built with plain HTML, CSS, JS and PHP.
 - Minimal, responsive, and distraction-free.
 - Focused on privacy, simplicity, and long-term maintainability.
 
