@@ -1,6 +1,6 @@
 # My Personal Blog
 
-This is the source code of my personal blog.  
+This is the source code of my personal blog websites.  
 The site is designed to be **simple, clean, privacy-friendly, and timeless**.  
 It’s mostly for my own use and learning.
 
